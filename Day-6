@@ -1,1 +1,13 @@
-
+siblings=('Nilima', 'Ishita', 'Koushik', 'Udgay')
+n=len(siblings)
+if n % 2 == 1:
+    middle_index = n//2
+    midle_item = siblings[middle_index]
+    print(f"There is one Middle Item: (positon {middle_index + 1} of {n}:")
+    print(midle_item)
+else:
+    middle_item1=siblings[n//2-1]
+    middle_item2=siblings[n//2]
+    print(f"Ther is Two Middle Item:(position {n//2} and {n//2 + 1})")
+    print(middle_item1)
+    print(middle_item2)
