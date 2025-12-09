@@ -1,0 +1,11 @@
+def create_acronym(phrase):
+    """
+    Generates an acronym from a given phrase.
+    """
+    words = phrase.split()
+    acronym = "".join(word[0].upper() for word in words)
+    return acronym
+
+phrase = "Coding For All"
+acronym_result = create_acronym(phrase)
+print(f"The acronym for '{phrase}' is '{acronym_result}'")
