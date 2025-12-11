@@ -9,3 +9,19 @@ def create_acronym(phrase):
 phrase = "Coding For All"
 acronym_result = create_acronym(phrase)
 print(f"The acronym for '{phrase}' is '{acronym_result}'")
+
+# Mid Country
+countries = ["USA", "Canada", "Germany", "France", "Japan", "India", "Brazil"]
+
+length = len(countries)
+mid = length // 2
+
+if length % 2 == 0:  # even length
+    first_half = countries[:mid]
+    second_half = countries[mid:]
+else:  # odd length
+    first_half = countries[:mid+1]
+    second_half = countries[mid+1:]
+
+print("First half:", first_half)
+print("Second half:", second_half)
