@@ -53,4 +53,44 @@ if __name__ == "__main__":
     user_input = input("Enter a month: ")
     season = check_season(user_input)
     print(f"The season is: {season}")
+#***************************************************************************************
+person = {
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_married': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+}
 
+# 1. Check if the person has skills key and print the middle skill
+if 'skills' in person:
+    skills = person['skills']
+    middle_index = len(skills) // 2
+    print(f"Middle skill: {skills[middle_index]}")
+
+# 2. Check if the person has skills key and if they have Python skill
+if 'skills' in person:
+    has_python = 'Python' in person['skills']
+    print(f"Has Python skill: {has_python}")
+
+# 3. Determine developer type based on skills
+if 'skills' in person:
+    skills_set = set(person['skills'])
+
+    if skills_set == {'JavaScript', 'React'}:
+        print('He is a front end developer')
+    elif {'Node', 'Python', 'MongoDB'}.issubset(skills_set):
+        print('He is a backend developer')
+    elif {'React', 'Node', 'MongoDB'}.issubset(skills_set):
+        print('He is a fullstack developer')
+    else:
+        print('unknown title')
+
+# 4. Check if married and lives in Finland
+if person.get('is_married') and person.get('country') == 'Finland':
+    print(f"{person['first_name']} {person['last_name']} lives in {person['country']}. He is married.")
