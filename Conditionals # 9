@@ -1,0 +1,56 @@
+if your_age > my_age:
+    diff = your_age - my_age
+    if diff == 1:
+        print("Your are 1 year older than me")
+    else:
+     print(f"You are {diff} Years older than me")
+elif your_age < my_age:
+    diff = my_age - your_age
+    if diff ==1:
+     print("I am 1 Year older than you")
+    else:
+        print(f"I am {diff} Years older than you")
+else:
+    print("We are the same age")
+
+#***************************************************************************
+
+def check_season(month):
+
+    # Determine the season based on the month input.
+    '''
+    Args:
+        month (str): Name of the month
+
+    Returns:
+        str: The corresponding season
+
+    # Convert to lowercase for case-insensitive comparison
+    month = month.lower()
+    '''
+    # Define seasons
+    autumn_months = ['september', 'october', 'november']
+    winter_months = ['december', 'january', 'february']
+    spring_months = ['march', 'april', 'may']
+    summer_months = ['june', 'july', 'august']
+
+    # Check which season the month belongs to
+    if month in autumn_months:
+        return "Autumn"
+    elif month in winter_months:
+        return "Winter"
+    elif month in spring_months:
+        return "Spring"
+    elif month in summer_months:
+        return "Summer"
+    else:
+        return "Invalid month. Please enter a valid month name."
+
+
+# Example usage
+if __name__ == "__main__":
+    # Test the function
+    user_input = input("Enter a month: ")
+    season = check_season(user_input)
+    print(f"The season is: {season}")
+
